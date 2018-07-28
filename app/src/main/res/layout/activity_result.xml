@@ -8,15 +8,17 @@
 
 
     <TableLayout
-        android:layout_width="368dp"
+        android:layout_width="358dp"
         android:layout_height="495dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <TableRow
             android:layout_width="match_parent"
@@ -26,6 +28,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
                 android:text="Height"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="24dp" />
@@ -48,6 +51,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
                 android:text="Weight"
                 tools:layout_editor_absoluteX="26dp"
                 tools:layout_editor_absoluteY="104dp" />
@@ -62,24 +66,35 @@
                 tools:layout_editor_absoluteY="89dp" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/calculate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calculate BMI"
-                tools:layout_editor_absoluteX="113dp"
-                tools:layout_editor_absoluteY="111dp" />
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculate"
+            android:text="Calculate BMI"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="111dp" />
 
-            <TextView
-                android:id="@+id/result"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        <Button
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="viewHistory"
+            android:text="View History"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="111dp" />
 
+
+        <TextView
+            android:id="@+id/bmiresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </TableLayout>
 

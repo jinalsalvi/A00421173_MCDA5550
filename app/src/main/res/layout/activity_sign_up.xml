@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jinal.bmicalculator.MainActivity">
-
-
+    tools:context="com.example.jinal.bmicalculator.SignUpActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,31 +18,49 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="User Name"
-            android:inputType="textPersonName" />
+            android:hint="Name"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="16dp" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
-            android:inputType="textCapSentences|textPassword" />
+            android:hint="password"
+            android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/login"
+        <EditText
+            android:id="@+id/bdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log In"
-            />
+            android:ems="10"
+            android:hint="Birth Date (DD-MM-YYYY)"
+            android:inputType="date"
+            android:onClick="setDate"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="95dp" />
+
+        <EditText
+            android:id="@+id/healthcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Health Card Number"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="188dp"
+            tools:layout_editor_absoluteY="175dp" />
 
         <Button
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register" />
-
+            android:text="Register"
+            tools:layout_editor_absoluteX="177dp"
+            tools:layout_editor_absoluteY="197dp" />
 
     </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
